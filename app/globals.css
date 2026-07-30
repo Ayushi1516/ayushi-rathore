@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 249 250 251; /* gray-50 */
+  --color-surface: 255 255 255; /* white */
+  --color-surface2: 243 244 246; /* gray-100 */
+  --color-border: 229 231 235; /* gray-200 */
+  --color-ink: 17 24 39; /* gray-900 */
+  --color-muted: 107 114 128; /* gray-500 */
+  --color-amber: 217 119 6; /* amber-600 */
+  --color-teal: 13 148 136; /* teal-600 */
+}
+
+.dark {
+  --color-bg: 15 20 25;
+  --color-surface: 22 27 34;
+  --color-surface2: 28 35 48;
+  --color-border: 42 49 61;
+  --color-ink: 230 232 235;
+  --color-muted: 139 148 158;
+  --color-amber: 232 163 61;
+  --color-teal: 95 179 163;
+}
+
+::selection {
+  background-color: rgb(var(--color-amber));
+  color: rgb(var(--color-bg));
+}
+
+/* visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgb(var(--color-amber));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-ink));
+}
+
+.blink {
+  animation: blink 1.1s step-end infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .blink { animation: none; }
+  * { transition: none !important; animation-duration: 0.001ms !important; }
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #2A313D; border-radius: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
