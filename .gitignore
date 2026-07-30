@@ -1,6 +1,23 @@
-node_modules
-.next
-out
-.vercel
+# Dependencies
+/node_modules
+
+# Build directory
+/.next/
+/out/
+
+# Vercel
+/.vercel/
+
+# Log files
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local environment variables
+# Never commit .env files!
+.env.local
+.env*.local
+
+# Misc
 .DS_Store
