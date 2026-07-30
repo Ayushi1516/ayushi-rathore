@@ -32,7 +32,7 @@ export default function ContactForm() {
 
       if (result.error) {
         toast.error(result.error);
-      } else {
+      } else if (result.success) {
         toast.success(result.success);
         reset();
       }

@@ -19,7 +19,7 @@ export async function sendEmail(formData: FormData) {
       from: "Portfolio Contact <onboarding@resend.dev>", // Must be from resend.dev on the free plan
       to: toEmail!,
       subject: `New message from ${name} via portfolio`,
-      reply_to: email,
+      replyTo: email,
       html: `<p>You have a new message from your portfolio contact form.</p>
              <p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
